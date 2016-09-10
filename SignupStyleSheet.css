@@ -18,6 +18,7 @@ h1
     margin-left: 400px;
     margin-bottom: 0px;
 }
+
 form{
     background: rgba(245,245 ,245 , 0.6);
     padding-top: 50px;
@@ -26,6 +27,7 @@ form{
     margin-left: 400px;
     border-radius: 15px;
     border: 5px solid indigo;
+
 }
 .centered{
     text-align: center;
@@ -68,6 +70,28 @@ input
     box-sizing: border-box;
 
 }
+@media (max-width:1092px )
+{
 
+    h1
+    {
+        width: 80%;
+        margin: auto;
+        padding: auto;
+    }
+    form
+    {
+        width: 80%;
+        margin: auto;
+        padding:auto;
+    }
+    input
+    {
+        width: 80%;
+        margin: auto;
+        padding: auto;
+    }
+
+}
 
 
