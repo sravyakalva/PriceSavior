@@ -2,8 +2,17 @@
 body
 {
     background: linear-gradient(-90deg,indigo,lightblue ) ;
-
 }
+img
+{
+    transition: transform 2s;
+    z-index: -1;
+}
+img:hover
+{
+    transform: rotate(360deg);
+}
+
 h1
 {
     font-size: 40px;
