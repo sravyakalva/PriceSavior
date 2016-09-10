@@ -2,19 +2,24 @@ body{
  background: linear-gradient(-90deg, indigo, lightblue);
 }
 
+img{
+	height: 60%;
+	width: 60%;
+	padding-left: 70px;
+
+}
+
 .divOutline{
   text-align: center;
   height: 70%;
   width: 30%;
-
   margin: auto;
-  position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
 /*defines size of white boxes*/
 .inputBox{
-	width:600px;
+	width:100%;
 	height: 75px;
 	
 	font-size: 20px;
@@ -25,7 +30,6 @@ body{
 /*top rounded edges with added space*/
 .ub{
 	border-radius: 8px 8px 0px 0px;
-	margin-top: 200px;
 }
 
 /*bottom rounded edges with added space*/
@@ -41,7 +45,7 @@ body{
 	display: block;
 	height:75px;
 	line-height: 75px;
-	width: 615px;
+	width: 103%;
 	text-align: center;
 	margin-top: 20px;
 	border-radius: 8px 8px 8px 8px;
@@ -56,3 +60,20 @@ a:hover {
     background-color: skyblue;
 }
 
+		
+@media(max-width: 800px){
+
+	.divOutline{
+		text-align: none;
+		width:80%;
+		height: 100%;
+		padding: auto;
+		margin:auto;
+	}
+
+	.ub{
+		margin-top: 10px;
+	}
+
+
+}
