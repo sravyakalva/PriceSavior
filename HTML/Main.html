@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/MainStyleSheet.css">
+</head>
+<body>
+
+    <!--Logo that directs to Signup page-->
+    <div class="right">
+        <a href="../HTML/SignUp.html"><img src="../Images/shoppingcart.png"  width="100" height="100"></a>   
+    </div>
+
+    <!--An F.A.Q. Section for the developing website -->
+    <section>
+        <h1>F.A.Q.</h1>
+        <article>
+            <header><h1>How do I use this site?</h1></header>   
+            <p>I don't know. Sravya and I are still trying to figure that out</p> 
+        </article>
+
+        <article>
+            <header><h1>Are there not other sites like this?</h1><header>
+            <p>While there may be tons of apps that compare prices, most sites do not take in account to where you live or calculate the total cost of all the stuff you want to buy. Sure, you can look for a few items, but what if your trying to enter your whole list? I think all of us can relate to comparing websites with one window open and a word document that we type all our findings in. I want to cut that two part process into one.</p>
+        </article>
+
+        <article>
+            <header><h1>How are you going to retrieve all the data?</h1><header>
+            <p>We plan on using the supermarket API (<a href="http://www.supermarketapi.com/Default.aspx">Link is here</a>). Hope this makes our lives easier so we can make your lives a bit easier :D</p>
+        </article>
+    </section>
+
+    <!--Zipcode will eventually be used to locate user's local stores-->
+    <p><label>zipcode:<input type="text"></label></p>
+
+
+    <!--User will be able to see price comparisons on a table and the total-->
+    <table style="width:100%">
+        <tr>
+            <th>Item</th>
+            <th>Safeway</th>
+            <th>Giant</th>
+            <th>Shoppers</th>
+            <th>Wegmens</th>
+            <th>Whole Foods</th>
+        </tr>
+
+        <!--Mock up data-->
+        <tr>
+            <td>Avocado</td>
+            <td>$0.79 each</td>
+            <td>$0.50 each</td>
+            <td>$0.85 each</td>
+            <td>$1.00 each</td>
+            <td>$1.25 each</td>
+        </tr>
+
+        <tr>
+            <td>Milk</td>
+            <td>$0.79 each</td>
+            <td>$0.50 each</td>
+            <td>$0.85 each</td>
+            <td>$1.00 each</td>
+            <td>$1.25 each</td>
+        </tr>
+
+        <tr>
+            <td>Bread</td>
+            <td>$0.79 each</td>
+            <td>$0.50 each</td>
+            <td>$0.85 each</td>
+            <td>$1.00 each</td>
+            <td>$1.25 each</td>
+        </tr>
+
+        <tr>
+            <td>Cheese</td>
+            <td>$0.79 each</td>
+            <td>$0.50 each</td>
+            <td>$0.85 each</td>
+            <td>$1.00 each</td>
+            <td>$1.25 each</td>
+        </tr>
+
+        <tr>
+            <td>Durian</td>
+            <td>$0.79 each</td>
+            <td>$0.50 each</td>
+            <td>$0.85 each</td>
+            <td>$1.00 each</td>
+            <td>$1.25 each</td>
+        </tr>
+
+        <tr>
+            <th>Total</th>
+            <td>$3.95 each</td>
+            <td>$2.50 each</td>
+            <td>$4.25 each</td>
+            <td>$5.00 each</td>
+            <td>$6.25 each</td>       
+        </tr>
+    </table>
+
+    <!--Image will be eventually used as the background for the bar-graph-->
+    <img class="fruit" src="../Images/fruits-and-vegetables-wallpaper-2.jpg">
+</body>
+</html>
