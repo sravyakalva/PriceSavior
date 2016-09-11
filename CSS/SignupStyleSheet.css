@@ -5,6 +5,7 @@ body
 }
 img
 {
+    margin-left: 650px;
     transition: transform 2s;
     z-index: -1;
 }
@@ -26,6 +27,7 @@ h1
     margin-right: 400px;
     margin-left: 400px;
     margin-bottom: 0px;
+
 }
 
 form{
@@ -100,7 +102,10 @@ input
         margin: auto;
         padding: auto;
     }
-
+    img
+    {
+        margin-left:45%;
+    }
 }
 
 
