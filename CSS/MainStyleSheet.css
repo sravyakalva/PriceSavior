@@ -1,0 +1,24 @@
+article{
+	position: relative;
+	width: 40%;
+
+}
+
+table{
+	margin-top: 50px;
+}
+
+td{
+	text-align: center;
+}
+
+body{
+	background: skyblue;
+}
+
+.right{
+	position: absolute;
+    right: -120px;
+    width: 300px;
+
+}
