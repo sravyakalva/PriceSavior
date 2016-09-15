@@ -1,0 +1,30 @@
+/* Removes the navbar's default margin-bottom and rounded borders */
+body{
+  background-color: grey;
+}
+
+.bg-foot{
+  background-color: black;
+  color: white;
+}
+
+.jumbotron{
+  background-image: url(../Images/background-fruit.jpg);
+  color: #f2f2f2;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.store{
+  width:100%;
+  height:50%;
+}
+    
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}

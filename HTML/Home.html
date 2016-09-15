@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Self created css-->
+  <link rel="stylesheet" href="../CSS/homeSheet.css"> 
+</head>
+
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">PriceSavior</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../HTML/SignUp.html"><span class="glyphicon glyphicon-pencil"></span> Sign-Up</a></li>
+        <li><a href="../HTML/Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--This section of page is the like the banner-->
+<div class="jumbotron" >
+  <div class="container text-center">
+    <h1>Price Savior</h1>
+    <p>Saving you money on your daily groceries</p>
+  </div>
+</div>
+
+<!--Shows pictures which links to supported grocery stores-->
+<div class="container-fluid bg-3 text-center">
+  <h3>Some of our supported grocery stores (based on capabilities of Supermarket API)</h3><br>
+  <div class="row">
+
+    <!--Safeway-->
+    <div class="col-sm-3">
+      <p>Safeway</p>
+      <a href="http://www.safeway.com/"><img src="../Images/safewayStore.jpg" class="img-responsive store" alt="Image"></a>
+    </div>
+
+    <!--Giant-->
+    <div class="col-sm-3">
+      <p>Giant</p>
+      <a href="https://giantfood.com/"><img src="../Images/giantStore.jpg" class="img-responsive store" alt="Image"></a>
+    </div>
+
+    <!--Wegmens-->
+    <div class="col-sm-3">
+      <p>Wegmens</p>
+      <a href="https://www.wegmans.com/"><img src="../Images/wegmensStore.jpg" class="img-responsive store" alt="Image"></a>
+    </div>
+
+    <!--Whole Foods-->
+    <div class="col-sm-3">
+      <p>Whole Foods</p>
+      <a href="http://www.wholefoodsmarket.com/"><img src="../Images/wholefoodsStore.jpg" class="img-responsive store" alt="Image"></a>
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid text-center">
+  <div class="row">
+
+    <!--Walmart-->
+    <div class="col-sm-3">
+      <p>Walmart</p>
+      <a href="https://www.walmart.com/"><img src="../Images/walmartStore.jpg" class="img-responsive store" alt="Image"></a>
+    </div>
+
+    <!--Target-->
+    <div class="col-sm-3">
+      <p>Target</p>
+      <a href="http://www.target.com/"><img src="../Images/targetStore.jpg" class="img-responsive store" alt="Image"></a>
+    </div>
+
+    <!--Shoppers-->
+    <div class="col-sm-3">
+      <p>Shoppers</p>
+      <a href="https://www.shoppersfood.com/"><img src="../Images/shoppersStore.jpg" class="img-responsive store" alt="Image"></a>
+    </div>
+
+    <!--Food Lion-->
+    <div class="col-sm-3">
+      <p>Food Lion</p>
+      <a href="https://www.foodlion.com/"><img src="../Images/foodlionStore.jpg" class="img-responsive store" alt="Image"></a>
+    </div>
+  </div>
+</div><br><br>
+
+<footer class="container-fluid text-center bg-foot">
+  <p>Created and Founded by Sravya Kalva & Michael Morris</p>
+  <p>Link to github repository is provided <a href="https://github.com/sravyakalva/PriceSavior">here</a></p>
+</footer>
+
+</body>
+</html>
