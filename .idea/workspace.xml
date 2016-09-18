@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc9d572a-76ef-497a-af67-863b1f85b4c7" name="Default" comment="New Files Work 2">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/myProfileStyleSheet.css" afterPath="$PROJECT_DIR$/CSS/myProfileStyleSheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/MyProfile.html" afterPath="$PROJECT_DIR$/HTML/MyProfile.html" />
     </list>
     <ignored path="PriceSavior.iws" />
@@ -35,21 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyProfile.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyProfile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HTML/MyProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
+            <state relative-caret-position="2748">
+              <caret line="237" column="6" selection-start-line="237" selection-start-column="6" selection-end-line="237" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myProfileStyleSheet.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="myProfileStyleSheet.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSS/myProfileStyleSheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="258">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,8 +118,8 @@
         <option value="$PROJECT_DIR$/HTML/Home.html" />
         <option value="$PROJECT_DIR$/JQuery/dropit.css" />
         <option value="$PROJECT_DIR$/JS/myProfile.js" />
-        <option value="$PROJECT_DIR$/CSS/myProfileStyleSheet.css" />
         <option value="$PROJECT_DIR$/HTML/MyProfile.html" />
+        <option value="$PROJECT_DIR$/CSS/myProfileStyleSheet.css" />
       </list>
     </option>
   </component>
@@ -371,7 +373,7 @@
       <updated>1473904419715</updated>
       <workItem from="1473904421016" duration="2000" />
       <workItem from="1473904449294" duration="4716000" />
-      <workItem from="1474135262263" duration="21543000" />
+      <workItem from="1474135262263" duration="22277000" />
     </task>
     <task id="LOCAL-00001" summary="New Files Work in Progress">
       <created>1474220914677</created>
@@ -384,7 +386,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26261000" />
+    <option name="totallyTimeSpent" value="26995000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,18 +593,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/myProfileStyleSheet.css">
+    <entry file="file://$PROJECT_DIR$/HTML/MyProfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="2748">
+          <caret line="237" column="6" selection-start-line="237" selection-start-column="6" selection-end-line="237" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/MyProfile.html">
+    <entry file="file://$PROJECT_DIR$/CSS/myProfileStyleSheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
+        <state relative-caret-position="258">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
