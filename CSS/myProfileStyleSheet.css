@@ -1,0 +1,9 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.jumbotron{
+    background-image: url(../Images/background-fruit.jpg);
+    color: #f2f2f2;
+
+}
