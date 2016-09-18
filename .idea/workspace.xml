@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc9d572a-76ef-497a-af67-863b1f85b4c7" name="Default" comment="New Files Work 2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JQuery/dropit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JQuery/dropit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/myProfileStyleSheet.css" afterPath="$PROJECT_DIR$/CSS/myProfileStyleSheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/Home.html" afterPath="$PROJECT_DIR$/HTML/Home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/MyProfile.html" afterPath="$PROJECT_DIR$/HTML/MyProfile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/myProfile.js" afterPath="$PROJECT_DIR$/JS/myProfile.js" />
     </list>
     <ignored path="PriceSavior.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -377,7 +371,7 @@
       <updated>1473904419715</updated>
       <workItem from="1473904421016" duration="2000" />
       <workItem from="1473904449294" duration="4716000" />
-      <workItem from="1474135262263" duration="21257000" />
+      <workItem from="1474135262263" duration="21543000" />
     </task>
     <task id="LOCAL-00001" summary="New Files Work in Progress">
       <created>1474220914677</created>
@@ -390,7 +384,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25975000" />
+    <option name="totallyTimeSpent" value="26261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
