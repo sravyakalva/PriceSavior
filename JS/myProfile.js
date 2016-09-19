@@ -4,8 +4,9 @@
 
 //Creates new rows for users to add
 function addRow(){
-	var table = document.getElementById("myData");
 
+	var table = document.getElementById("myData");
+	historyBack();
 	//Adds below the title
 	var row = table.insertRow(1);
 
@@ -16,16 +17,22 @@ function addRow(){
 	var storeCell = row.insertCell(3);
 
 	//Creates empty slots
-	var a = document.createElement("INPUT");
+	var a = document.createElement("select");
+	a.setAttribute("id", "Food");
+	a.innerHTML='<option>Apples</option><option>Orange</option><option>Kiwi</option>';
+
+	a.setAttribute("onchange","calculateFields()");
 	var b = document.createElement("INPUT");
 	b.setAttribute("type","number");
+	b.setAttribute("class","Prices");
 
 	var c = document.createElement("INPUT");
 	c.setAttribute("type","number");
-	c.setAttribute("class","num");
+	c.setAttribute("class","Quantity");
 
 
 	var d = document.createElement("INPUT");
+	d.setAttribute("class","Store");
 
 	//Adds the input to the cell
 	foodCell.appendChild(a);
@@ -42,3 +49,23 @@ function deleteRow(){
 	table.deleteRow(table.rows.length - 1);
 
 };
+function historyBack() {
+	history.pushState(null,null,null);
+}
+//dummy data
+var Storeprices=
+{
+	'Walmart':
+	{'Apple':0.20, 'Orange':0.10, 'Bread':3.40, 'Banana':0.10, 'Kiwi':0.89},
+	'Shoppers':
+	{'Apple':0.10, 'Orange':0.19, 'Bread':3.10, 'Banana':0.20, 'Kiwi':0.99},
+	'Costco':
+	{'Apple':0.33, 'Orange':0.39, 'Bread':3.00, 'Banana':0.10}
+};
+
+function calculateFields()
+{
+	var nameOfFood=$('#Apple').value;
+	console.log(nameOfFood);
+
+}
