@@ -29,9 +29,9 @@ footer {
   padding: 25px;
 }
 fieldset{
-  opacity: 0.5;
-  background-color: whitesmoke;
-  z-index: -1;
+
+  background-color: rgba(245, 245, 245, 0.5);
+  z-index: 1;
   margin-right: 25rem;
   margin-left: 25rem;
 }
