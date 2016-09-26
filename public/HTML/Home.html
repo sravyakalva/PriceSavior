@@ -4,6 +4,20 @@
 <head>
   <title>Home Page</title>
   <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+        "Use Strict";
+        // Initialize Firebase
+        var config = 
+        {
+            apiKey: "AIzaSyAs9JCm2Fyid8kmsF7VPxi5KhoPrMh4O-w",
+            authDomain: "pricesavior-23da4.firebaseapp.com",
+            databaseURL: "https://pricesavior-23da4.firebaseio.com",
+            storageBucket: "pricesavior-23da4.appspot.com",
+            messagingSenderId: "581506839881"
+        };
+        firebase.initializeApp(config);
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
   <script type="text/javascript"src="../JQuery/jquery-3.1.0.min.js" ></script>
@@ -37,22 +51,21 @@
               <div id="Form" class="centered">
 
               	<!--For now, redirects the information to the MyProfile Page-->
-                <form action="../HTML/MyProfile.html">
+                <form >
 
                   <input type="text" name="username" placeholder="Enter Username"/><br>
                   <br>
                   <input type="password" name="password" placeholder="Enter Password"/><br>
                   <br>
-                  <input type="password" name="confirmPassword" placeholder="Confirm Password"/><br>
+                  <input type="password" name="confirmPassword" placeholder="Confirm Password" onchange="validatePassword()"/><br>
                   <br>
                   <input type="text" name="zipcode" pattern="[0-9]{5}" placeholder="Enter Zipcode"/><br>
                   <br>
                   <input type="email" name="email" placeholder="Enter Email"/><br>
                   <br>
                   <br><br>
-                  <input type="submit"  class="blocked" value="Submit" />
-                </form>
-
+                  <input type="submit"  class="blocked" value="Submit" onclick="UpdateSignUpInformation()" />
+                  </form>
               </div>
             </div>
             <a href="#" id="signUpLink"><span class="glyphicon glyphicon-pencil"></span>Sign-Up</a>
@@ -82,25 +95,25 @@
     <!--Safeway-->
     <div class="col-sm-3">
       <p>Safeway</p>
-      <a href="http://www.safeway.com/"><img src="../Images/safewayStore.jpg" class="img-responsive store" alt="Image"></a>
+      <a href="http://www.safeway.com/"><img src="../../Images/safewayStore.jpg" class="img-responsive store" alt="Image"></a>
     </div>
 
     <!--Giant-->
     <div class="col-sm-3">
       <p>Giant</p>
-      <a href="https://giantfood.com/"><img src="../Images/giantStore.jpg" class="img-responsive store" alt="Image"></a>
+      <a href="https://giantfood.com/"><img src="../../Images/giantStore.jpg" class="img-responsive store" alt="Image"></a>
     </div>
 
     <!--Wegmens-->
     <div class="col-sm-3">
       <p>Wegmens</p>
-      <a href="https://www.wegmans.com/"><img src="../Images/wegmensStore.jpg" class="img-responsive store" alt="Image"></a>
+      <a href="https://www.wegmans.com/"><img src="../../Images/wegmensStore.jpg" class="img-responsive store" alt="Image"></a>
     </div>
 
     <!--Whole Foods-->
     <div class="col-sm-3">
       <p>Whole Foods</p>
-      <a href="http://www.wholefoodsmarket.com/"><img src="../Images/wholefoodsStore.jpg" class="img-responsive store" alt="Image"></a>
+      <a href="http://www.wholefoodsmarket.com/"><img src="../../Images/wholefoodsStore.jpg" class="img-responsive store" alt="Image"></a>
     </div>
   </div>
 </div><br>
@@ -111,25 +124,25 @@
     <!--Walmart-->
     <div class="col-sm-3">
       <p>Walmart</p>
-      <a href="https://www.walmart.com/"><img src="../Images/walmartStore.jpg" class="img-responsive store" alt="Image"></a>
+      <a href="https://www.walmart.com/"><img src="../../Images/walmartStore.jpg" class="img-responsive store" alt="Image"></a>
     </div>
 
     <!--Target-->
     <div class="col-sm-3">
       <p>Target</p>
-      <a href="http://www.target.com/"><img src="../Images/targetStore.jpg" class="img-responsive store" alt="Image"></a>
+      <a href="http://www.target.com/"><img src="../../Images/targetStore.jpg" class="img-responsive store" alt="Image"></a>
     </div>
 
     <!--Shoppers-->
     <div class="col-sm-3">
       <p>Shoppers</p>
-      <a href="https://www.shoppersfood.com/"><img src="../Images/shoppersStore.jpg" class="img-responsive store" alt="Image"></a>
+      <a href="https://www.shoppersfood.com/"><img src="../../Images/shoppersStore.jpg" class="img-responsive store" alt="Image"></a>
     </div>
 
     <!--Food Lion-->
     <div class="col-sm-3">
       <p>Food Lion</p>
-      <a href="https://www.foodlion.com/"><img src="../Images/foodlionStore.jpg" class="img-responsive store" alt="Image"></a>
+      <a href="https://www.foodlion.com/"><img src="../../Images/foodlionStore.jpg" class="img-responsive store" alt="Image"></a>
     </div>
   </div>
 </div><br><br>
