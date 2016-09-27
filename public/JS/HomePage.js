@@ -48,18 +48,36 @@ function validatePassword()
             });
         }
 }
+
+
+
+//Updates firebase to add new users
 function UpdateSignUpInformation()
 {
-    var signUp=firebase.database().ref("SignUp");
-   //var child= signUp.child("u");
-   // child.set({"Password":"jsjsjjsjs"});
-   /* (signUp.child($("input[name='username']"))).set
-    ({
-        "Password":($("input[name='password']").val()),
-        "Zipcode":($("input[name='zipcode']").val()),
-        "Email":($("input[name='email']").val())
-    });*/
-    signUp.push({"Username":($("input[name='username']").val()),"Password":($("input[name='password']").val()),"Zipcode":($("input[name='zipcode']").val()),"Email":($("input[name='email']").val())});
-    
+
+    var username = $("input[name='username']").val();
+    var password = $("input[name='password']").val();
+    var zipcode = $("input[name='zipcode']").val();
+    var email = $("input[name='email']").val();
+
+    //Sets the node to the username
+    var node = firebase.database().ref().child(username);
+    node.set({
+        "Username": username,
+        "Password": password,
+        "Zipcode":zipcode,
+        "Email": email
+    });
 }
+// Reads from firebase to console.
+function giveBackUserInfo(){
+
+    var childCountRef = firebase.database().ref().child('kiko');
+    childCountRef.on('value', function(snapshot){
+        var data = snapshot;
+        console.log(data.username);
+    });
+}
+
+
 
