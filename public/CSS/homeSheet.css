@@ -3,6 +3,20 @@ body{
   background-color: grey;
 }
 
+input[type=submit]:disabled
+{
+    background-color: gray;
+    cursor: not-allowed;
+}
+input:invalid
+{
+    border: 5px solid red;
+}
+input[type=email]:hover,input[type=password]:hover,input[type=text]:hover
+{
+   border: 5px solid lightskyblue;
+
+}
 .bg-foot{
   background-color: black;
   color: white;

@@ -122,3 +122,6 @@ li.dropdown {
     display: inline-block;
     border-radius: 50%;
 }
+#search{
+    width:40rem;
+}
