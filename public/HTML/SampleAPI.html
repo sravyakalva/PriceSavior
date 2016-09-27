@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample</title>
+</head>
+<body>
+    <div id="clothes"></div>
+
+
+
+    <script>
+        var clothes = new XMLHttpRequest();
+        clothes.open("GET", "http://api.shopstyle.com/api/v2/brands?pid=uid3824-35982732-83",true);
+        clothes.send();
+        var x = loadJSON()
+
+        var result = clothes.name;
+        console.log(result.stringify());
+
+    </script>
+
+</body>
+</html>
