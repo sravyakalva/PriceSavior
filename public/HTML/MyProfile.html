@@ -82,6 +82,8 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header" style="padding-top:50px">Dashboard</h1>
 
+
+            <!-- Makes the circular images on top-->
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
@@ -104,6 +106,19 @@
                     <span class="text-muted">Something else</span>
                 </div>
             </div>
+            <script>
+                $(document).ready(function()
+                {
+
+                    $.getJSON('http://api.shopstyle.com/api/v2/brands?pid=uid3824-35982732-83',function(ssResults){
+                        //document.write(JSON.stringify(ssResults.brands[200].name));
+                    });
+
+
+
+                });
+            </script>
+
         </div>
      </div>
     </div>
