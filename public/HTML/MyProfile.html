@@ -106,18 +106,10 @@
                     <span class="text-muted">Something else</span>
                 </div>
             </div>
-            <script>
-                $(document).ready(function()
-                {
-
-                    $.getJSON('http://api.shopstyle.com/api/v2/brands?pid=uid3824-35982732-83',function(ssResults){
-                        //document.write(JSON.stringify(ssResults.brands[200].name));
-                    });
-
-
-
-                });
-            </script>
+            <input id="search" placeholder="Type in A Name or Brand Name or a Unbranded name"/>
+            <button id="button" type="button" onclick="BrandSearch()">Click me!</button>
+            <div id="img">
+            </div>
 
         </div>
      </div>
