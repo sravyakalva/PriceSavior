@@ -6,8 +6,8 @@ $(document).ready(function ()
     $('#signUpForm').dialog({autoOpen:false})
     $('#signUpLink').click(function(){
        $('#signUpForm').dialog('open');
-        validate();
-        $('input').on('keyup', validate);
+       // validate();
+       // $('input').on('keyup', validate);
     });
     
 });
@@ -25,10 +25,9 @@ function validate()
         // if it has a value, increment the counter
         if ($(this).val()) 
         {
-            if($(this).valid()==true)
-                {
+
                      inputsWithValues += 1;
-                }
+
            
         }
     });
@@ -52,6 +51,14 @@ function validatePassword()
 function UpdateSignUpInformation()
 {
     var signUp=firebase.database().ref("SignUp");
+   //var child= signUp.child("u");
+   // child.set({"Password":"jsjsjjsjs"});
+   /* (signUp.child($("input[name='username']"))).set
+    ({
+        "Password":($("input[name='password']").val()),
+        "Zipcode":($("input[name='zipcode']").val()),
+        "Email":($("input[name='email']").val())
+    });*/
     signUp.push({"Username":($("input[name='username']").val()),"Password":($("input[name='password']").val()),"Zipcode":($("input[name='zipcode']").val()),"Email":($("input[name='email']").val())});
     
 }
