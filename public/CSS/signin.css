@@ -1,22 +1,37 @@
 /*Bootstrap CSS Template for Sign-in page
   with some added lines by the PriceSavior Team*/
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background:url(../Images/background-fruit.jpg);
+  padding-top: 225px;  /*Changes vertical alignment of formbox*/
+  background:url(../Images/watch.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center -300px;
 
 }
 
+/*Creates the background box for fieldset*/
+fieldset{
+
+  background-color: rgba(248, 248, 255, 0.9);
+  z-index: 1;
+  margin-right: 25rem;
+  margin-left: 25rem;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+/*Changes the overall size and placement of whats inside form*/
 .form-signin {
   max-width: 330px;
-  padding: 15px;
+  padding: 30px;
+  padding-top: 0px;
   margin: 0 auto;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
-}
-.form-signin .checkbox {
   font-weight: normal;
 }
 .form-signin .form-control {
@@ -32,12 +47,12 @@ body {
   z-index: 2;
 }
 .form-signin input[type="email"] {
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
   margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
 }
 .form-signin input[type="password"] {
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
   margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }

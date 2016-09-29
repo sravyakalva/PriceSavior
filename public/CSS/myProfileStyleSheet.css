@@ -5,7 +5,6 @@
 .jumbotron{
     background-image: url(../Images/background-fruit.jpg);
     color: #f2f2f2;
-
 }
 
 
@@ -85,11 +84,7 @@ li.dropdown {
     background-color: #2BBBAD;
 }
 
-
-/*
- * Main content
- */
-
+ /* Main content*/
 .main {
     padding: 20px;
 }
