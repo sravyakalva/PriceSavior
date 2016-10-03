@@ -51,24 +51,32 @@ function validatePassword()
 
 
 
-//Updates firebase to add new users
-function UpdateSignUpInformation()
-{
+$(function(){
+    $('#account').submit(function(ev) {
 
-    var username = $("input[name='username']").val();
-    var password = $("input[name='password']").val();
-    var zipcode = $("input[name='zipcode']").val();
-    var email = $("input[name='email']").val();
+        ev.preventDefault(); // to stop the form from submitting
+        var username = $("input[name='username']").val();
+        var password = $("input[name='password']").val();
+        var zipcode = $("input[name='zipcode']").val();
+        var email = $("input[name='email']").val();
 
-    //Sets the node to the username
-    var node = firebase.database().ref().child(username);
-    node.set({
-        "Username": username,
-        "Password": password,
-        "Zipcode":zipcode,
-        "Email": email
+        //Replaces "." since Firebase does not accept it
+        var account = email.replace(/\./g,'|');
+
+
+        //Sets the node to the email
+        var node = firebase.database().ref().child(account);
+        node.set({
+            "Username": username,
+            "Password": password,
+            "Zipcode":zipcode,
+            "Email": email
+        });
+
+        $('#signUpForm').dialog('close');
     });
-}
+});
+
 // Reads from firebase to console.
 function giveBackUserInfo(){
 
