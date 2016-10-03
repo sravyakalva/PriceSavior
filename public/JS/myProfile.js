@@ -71,35 +71,36 @@ function calculateFields()
 }
 //Searches the name, unbrandname, or branded name of the item and displays the image and the description
 
-function BrandSearch(){
-	var search=document.getElementById('search').value;
-	console.log(search);
+$(document).ready(function (){
+	//var search=document.getElementById('search').value;
+	//console.log(search);
 	$.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
 		for (i=0;i< ssResults.products.length;i++)
 		{
-			console.log(ssResults.products[i].unbrandedName);
-			//console.log((ssResults.products[i].image.sizes.Medium.url));
-			if((ssResults.products[i].name)==search || (ssResults.products[i].brandedName)==search ||(ssResults.products[i].unbrandedName)==search)
-			{
-				var src=ssResults.products[i].image.sizes.Medium.url;
-				var img=$('<img />',{
-					id:search,
-					src:src
-				});
-				img.appendTo($('#img'));
-				//$('<br/>').appendTo(img);
-				$('<p>').appendTo($('#img')).html(ssResults.products[i].description);
-				$('<p>').appendTo($('#img')).html(ssResults.products[i].priceLabel);
-
-			}
-
+			console.log(ssResults.products[i].categories[0].id);
+			var categories=ssResults.products[i].categories[0].id;
+			$('<li class="list-group-item"></li>').text(categories).attr("id",categories).appendTo("#Categories");
 		}
 
+		//console.log((ssResults.products[i].image.sizes.Medium.url));
+		/*if((ssResults.products[i].name)==search || (ssResults.products[i].brandedName)==search ||(ssResults.products[i].unbrandedName)==search
+		 || (ssResults.products[i].categories[0].id)==search )
+		 {
+		 var src=ssResults.products[i].image.sizes.Medium.url;
+		 var img=$('<img />',{
+		 id:search,
+		 src:src
+		 });
+		 img.appendTo($('#img'));
+		 //$('<br/>').appendTo(img);
+		 $('<p>').appendTo($('#img')).html(ssResults.products[i].description);
+		 $('<p>').appendTo($('#img')).html(ssResults.products[i].priceLabel);
 
+		 } */
 
 	});
 
 
 
 
-}
+});
