@@ -50,7 +50,7 @@ function validatePassword()
 }
 
 
-
+//Gets account sign-up information and pushes to firebase
 $(function(){
     $('#account').submit(function(ev) {
 
