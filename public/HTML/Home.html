@@ -4,6 +4,15 @@
 <head>
   <title>Home Page</title>
   <meta charset="utf-8">
+
+  <!-- React -->
+  <script src="../react-15.3.2/build/react.js"></script>
+  <script src="../react-15.3.2/build/react-dom.js"></script>
+
+  <!--Babel-->
+  <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+
+  <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <script>
         "Use Strict";
@@ -18,18 +27,31 @@
         };
         firebase.initializeApp(config);
     </script>
+
+  <!-- ReactFire -->
+  <script src="https://cdn.firebase.com/libs/reactfire/1.0.0/reactfire.min.js"></script>
+
+  <!--Bootstrap-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-  <script type="text/javascript"src="../JQuery/jquery-3.1.0.min.js" ></script>
+
+  <!--CSS-->
   <link rel="stylesheet" href="../CSS/homeSheet.css">
-    <link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.min.css">
-    <script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
-    <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+  <!--Jquery-->
+  <script type="text/javascript"src="../JQuery/jquery-3.1.0.min.js" ></script>
+  <link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+  <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+  <!--JavaScript-->
   <script type="text/javascript" src="../JS/HomePage.js"></script>
+
+
 </head>
 
 
-<body>
+<body class="mainbackground">
 <nav class="navbar navbar-fixed-top navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -38,8 +60,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="Home.html">PriceSavior</a>
+      <a class="navbar-brand" href="Home.html" style="font-family:'Copperplate Gothic Light'">PriceSavior</a>
     </div>
+
+    <!--Creates the navbar-->
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
@@ -48,10 +72,10 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
             <div id="signUpForm" title="Signup">
-              <div id="Form" class="centered">
+              <div id="Form" action="nothing">
 
               	<!--For now, redirects the information to the MyProfile Page-->
-                <form >
+                <form onsubmit="myfunc()">
 
                   <input type="text" name="username" placeholder="Enter Username"/><br>
                   <br>
@@ -64,16 +88,15 @@
                   <input type="email" name="email" placeholder="Enter Email"/><br>
                   <br>
                   <br><br>
-                  <button type="button"  class="blocked" onclick="UpdateSignUpInformation()">Submit</button>
-                  <button  type="button" onclick="giveBackUserInfo()">Click here to shoot username to console</button>
-                  </form>
+                  <input type="submit"  class="blocked"/>
+                </form>
               </div>
             </div>
             <a href="#" id="signUpLink"><span class="glyphicon glyphicon-pencil"></span>Sign-Up</a>
 
         </li>
         <li>
-          <a href="../HTML/Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+          <a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
         </li>
       </ul>
     </div>
@@ -81,10 +104,8 @@
 </nav>
 
 <!--This section of page is the like the banner-->
-<div class="jumbotron" >
-  <div class="container text-center">
-    <h1>Price Savior</h1>
-    <p>CURRENTLY UNDER DEVELOPMENT! </p>
+<div class="jumbotron text-center" >
+  <div id="banner" class="container text-center">
   </div>
 </div>
 
@@ -92,9 +113,8 @@
 
 
 
-<footer class="container-fluid text-center bg-foot">
-  <p>Created and Founded by Sravya Kalva & Michael Morris</p>
-  <p>Link to github repository is provided <a href="https://github.com/sravyakalva/PriceSavior">here</a></p>
+<footer id = "footer" class="container-fluid text-center bg-foot">
+  <p style="font-family: 'Copperplate Gothic Light'">Created and Founded by Sravya Kalva & Michael Morris</p>
 </footer>
 
 </body>

@@ -4,17 +4,33 @@
     <title>Home Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
     <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript"src="../JQuery/jquery-3.1.0.min.js" ></script>
+
+    <!--CSS-->
     <link rel="stylesheet" href="../CSS/myProfileStyleSheet.css">
+
+    <!--Jquery-->
+    <script type="text/javascript"src="../JQuery/jquery-3.1.0.min.js" ></script>
     <link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.min.css">
     <script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
     <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../JS/myProfile.js"></script>
+
+
+    <!----React & Babel----->
+    <script src="../react-15.3.2/build/react.js"></script>
+    <script src="../react-15.3.2/build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <!--Javascript-->
+
+    <script type="text/babel" src="../JS/myProfile.js"></script>
 </head>
 
 
 <body>
+
+<!--Creates the top navbar-->
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -61,29 +77,31 @@
 
 
 <div class="container-fluid">
+
+    <!--Everything below the navbar-->
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
 
-        	<img src="../Images/shoppingcart.png" width="100%" height="100%" class="img-responsive" alt="Generic placeholder thumbnail">
-            
+        <!--Creates the side bar-->
+        <div class="col-sm-3 col-md-1 sidebar">
 
+        	<!--<img src="../Images/shoppingcart.png" width="100%" height="100%" class="img-responsive" alt="Generic placeholder thumbnail">-->
+            <div class="circle-avatar" style="background-image:url(../Images/logo.jpg); margin-bottom: 15%"></div>
+
+            <!--Lists the options within the side navbar-->
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                 <li><a href="../HTML/Friends.html">Friends</a></li>
                 <li><a href="../HTML/Settings.html">Settings</a></li>
-                <li><a href="../HTML/Explore.html">Explore</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="../HTML/Createlist.html">Create a List</a></li>
-                <li><a href="../HTML/SavedList.html">Saved Lists</a></li>
-                <li><a href="../HTML/Localstores.html">Local Stores</a></li>
+                <li><a href="../HTML/Createlist.html">Create an outfit</a></li>
+                <li><a href="../HTML/SavedList.html">Saved Outfits</a></li>
             </ul>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header" style="padding-top:50px">Dashboard</h1>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
+            <h1 class="page-header font" style="padding-top:50px">Shopstyle Store</h1>
 
 
             <!-- Makes the circular images on top-->
+            <!-- Part of bootstrap template:
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
@@ -105,11 +123,11 @@
                     <h4>Label</h4>
                     <span class="text-muted">Something else</span>
                 </div>
-            </div>
-            <input id="search" placeholder="Type in A Name or Brand Name or a Unbranded name"/>
-            <button id="button" type="button" onclick="BrandSearch()">Click me!</button>
-            <div id="img">
-            </div>
+            </div> -->
+
+
+            <ul id="Categories">
+            </ul>
 
         </div>
      </div>

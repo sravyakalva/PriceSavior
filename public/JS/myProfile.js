@@ -69,37 +69,128 @@ function calculateFields()
 	console.log(nameOfFood);
 
 }
-//Searches the name, unbrandname, or branded name of the item and displays the image and the description
 
-function BrandSearch(){
-	var search=document.getElementById('search').value;
-	console.log(search);
+
+
+
+
+$(document).ready(function () {
+
+	var categories = [];
+	$.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50', function (ssResults)
+	{
+		var count=0;
+		for (var i = 0; i < ssResults.products.length; i++)
+		{    // if the categories list isn't empty
+			if (categories != null)
+			{     // if the categories doesn't exist already in the array
+				if (categories.indexOf(ssResults.products[i].categories[0].id) == -1)
+				{
+					categories.push(ssResults.products[i].categories[0].id);
+					var category=ssResults.products[i].categories[0].id;
+					$('<li class="list-group-item">').appendTo($('#Categories')).html(category);
+					var src=ssResults.products[i].image.sizes.Medium.url;
+					var img=$('<img />',{
+						src:src
+					});
+					$('<br>').appendTo('#Categories');
+					img.appendTo('#Categories');
+				}
+				else
+				{
+					var src=ssResults.products[i].image.sizes.Medium.url;
+					var img=$('<img />',{
+						src:src
+					});
+					$('<br>').appendTo('#Categories');
+					img.appendTo('#Categories');
+				}
+			}
+			else
+			{
+				categories.push(ssResults.products[i].categories[0].id);
+				var category=ssResults.products[i].categories[0].id;
+				$('<li class="list-group-item">').appendTo($('#Categories')).html(category);
+				var src=ssResults.products[i].image.sizes.Medium.url;
+				var img=$('<img />', {
+					src: src
+				});
+				img.appendTo('#Categories');
+
+			}
+		}
+
+	});
+
+
+
+});
+function getTheImage(category)
+{
+
 	$.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
-		for (i=0;i< ssResults.products.length;i++)
+		for(var i=0; i<ssResults.products.length;i++)
 		{
-			console.log(ssResults.products[i].unbrandedName);
-			//console.log((ssResults.products[i].image.sizes.Medium.url));
-			if((ssResults.products[i].name)==search || (ssResults.products[i].brandedName)==search ||(ssResults.products[i].unbrandedName)==search)
+			if(category==(ssResults.products[i].categories[0].id))
 			{
 				var src=ssResults.products[i].image.sizes.Medium.url;
 				var img=$('<img />',{
-					id:search,
 					src:src
 				});
-				img.appendTo($('#img'));
-				//$('<br/>').appendTo(img);
-				$('<p>').appendTo($('#img')).html(ssResults.products[i].description);
-				$('<p>').appendTo($('#img')).html(ssResults.products[i].priceLabel);
-
+				img.appendTo($(this));
+				$('<p>').appendTo($(this)).html(ssResults.products[i].description);
+				$('<p>').appendTo($(this)).html(ssResults.products[i].priceLabel);
 			}
+		}
+	});
+}
+
+
+
+
+/*$(document).ready(function (){
+	//var search=document.getElementById('search').value;
+	//console.log(search);
+	$.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
+		for (i=0;i< ssResults.products.length;i++)
+		{
+			//console.log(ssResults.products[i].categories[0].id);
+			//var categories=ssResults.products[i].categories[0].id;
+			var cat= React.createClass({
+				render: function(){
+					return(
+						<ul class="list-group">
+							<li class="list-group-item">{this.probs.category}</li>
+						</ul>
+					)
+				}
+			});
+			ReactDOM.render(
+				<cat category={ssResults.products[i].categories[0].id}/>,
+			document.getElementById('Categories')
+		);
 
 		}
 
+		//console.log((ssResults.products[i].image.sizes.Medium.url));
+		/*if((ssResults.products[i].name)==search || (ssResults.products[i].brandedName)==search ||(ssResults.products[i].unbrandedName)==search
+		 || (ssResults.products[i].categories[0].id)==search )
+		 {
+		 var src=ssResults.products[i].image.sizes.Medium.url;
+		 var img=$('<img />',{
+		 id:search,
+		 src:src
+		 });
+		 img.appendTo($('#img'));
+		 //$('<br/>').appendTo(img);
+		 $('<p>').appendTo($('#img')).html(ssResults.products[i].description);
+		 $('<p>').appendTo($('#img')).html(ssResults.products[i].priceLabel);
 
+		 }
 
 	});
 
 
 
 
-}
+});*/

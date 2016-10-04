@@ -1,13 +1,11 @@
+body{
+    background-color: ghostwhite;
+}
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
 }
-.jumbotron{
-    background-image: url(../Images/background-fruit.jpg);
-    color: #f2f2f2;
-
-}
-
 
 li a, .dropbtn {
     display: inline-block;
@@ -62,7 +60,7 @@ li.dropdown {
         padding: 20px;
         overflow-x: hidden;
         overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-        background-color: #263238;
+        background-color: #212121; /*Background of sidebar*/
         border-right: 1px solid #eee;
     }
 }
@@ -72,7 +70,7 @@ li.dropdown {
     margin-right: -21px; /* 20px padding + 1px border */
     margin-bottom: 20px;
     margin-left: -20px;
-    background-color: #00695c;
+    background-color: #2E2E2E; /*Color of tabs*/
 }
 .nav-sidebar > li > a {
     padding-right: 20px;
@@ -82,14 +80,10 @@ li.dropdown {
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
     color: whitesmoke;
-    background-color: #2BBBAD;
+    background-color: midnightblue; /*Overview Button*/
 }
 
-
-/*
- * Main content
- */
-
+ /* Main content*/
 .main {
     padding: 20px;
 }
@@ -124,4 +118,40 @@ li.dropdown {
 }
 #search{
     width:40rem;
+}
+
+.font{
+    font-family: "Copperplate Gothic Light";
+}
+
+/*Provided by example to make center image in the center*/
+div.circle-avatar{
+    /* make it responsive */
+    max-width: 100%;
+    width:100%;
+    height:auto;
+    display:block;
+    /* div height to be the same as width*/
+    padding-top:100%;
+
+    /* make it a cirkle */
+    border-radius:50%;
+
+    /* Centering on image`s center*/
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    /* it makes the clue thing, takes smaller dimention to fill div */
+    background-size: cover;
+
+    /* it is optional, for making this div centered in parent*/
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#Categories :hover{
+    background-color: #f1f1f1;
 }
