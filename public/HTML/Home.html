@@ -6,9 +6,11 @@
   <meta charset="utf-8">
 
   <!-- React -->
-  <script src="https://fb.me/react-15.3.0.min.js"></script>
-  <script src="https://fb.me/react-dom-15.3.0.min.js"></script>
+  <script src="../react-15.3.2/build/react.js"></script>
+  <script src="../react-15.3.2/build/react-dom.js"></script>
 
+  <!--Babel-->
+  <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
 
   <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
@@ -44,6 +46,8 @@
 
   <!--JavaScript-->
   <script type="text/javascript" src="../JS/HomePage.js"></script>
+
+
 </head>
 
 
@@ -92,7 +96,7 @@
 
         </li>
         <li>
-          <a href="../HTML/Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+          <a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
         </li>
       </ul>
     </div>
@@ -101,8 +105,7 @@
 
 <!--This section of page is the like the banner-->
 <div class="jumbotron text-center" >
-  <div class="container text-center">
-    <h3>PRICE SAVIOR</h3>
+  <div id="banner" class="container text-center">
   </div>
 </div>
 
