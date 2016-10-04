@@ -70,6 +70,10 @@ function calculateFields()
 
 }
 
+
+
+
+
 $(document).ready(function () {
 
 	var categories = [];
@@ -78,21 +82,41 @@ $(document).ready(function () {
 		var count=0;
 		for (var i = 0; i < ssResults.products.length; i++)
 		{    // if the categories list isn't empty
-		//console.log(ssResults.products[i].categories[0].id);
 			if (categories != null)
 			{     // if the categories doesn't exist already in the array
 				if (categories.indexOf(ssResults.products[i].categories[0].id) == -1)
 				{
 					categories.push(ssResults.products[i].categories[0].id);
-					count++;
-					$('<li class="list-group-item">').appendTo($('#Categories')).html(ssResults.products[i].categories[0].id);
+					var category=ssResults.products[i].categories[0].id;
+					$('<li class="list-group-item">').appendTo($('#Categories')).html(category);
+					var src=ssResults.products[i].image.sizes.Medium.url;
+					var img=$('<img />',{
+						src:src
+					});
+					$('<br>').appendTo('#Categories');
+					img.appendTo('#Categories');
+				}
+				else
+				{
+					var src=ssResults.products[i].image.sizes.Medium.url;
+					var img=$('<img />',{
+						src:src
+					});
+					$('<br>').appendTo('#Categories');
+					img.appendTo('#Categories');
 				}
 			}
 			else
 			{
 				categories.push(ssResults.products[i].categories[0].id);
-				count++;
-				$('<li class="list-group-item">').appendTo($('#Categories')).html(ssResults.products[i].categories[0].id);
+				var category=ssResults.products[i].categories[0].id;
+				$('<li class="list-group-item">').appendTo($('#Categories')).html(category);
+				var src=ssResults.products[i].image.sizes.Medium.url;
+				var img=$('<img />', {
+					src: src
+				});
+				img.appendTo('#Categories');
+
 			}
 		}
 
@@ -101,7 +125,25 @@ $(document).ready(function () {
 
 
 });
+function getTheImage(category)
+{
 
+	$.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
+		for(var i=0; i<ssResults.products.length;i++)
+		{
+			if(category==(ssResults.products[i].categories[0].id))
+			{
+				var src=ssResults.products[i].image.sizes.Medium.url;
+				var img=$('<img />',{
+					src:src
+				});
+				img.appendTo($(this));
+				$('<p>').appendTo($(this)).html(ssResults.products[i].description);
+				$('<p>').appendTo($(this)).html(ssResults.products[i].priceLabel);
+			}
+		}
+	});
+}
 
 
 
