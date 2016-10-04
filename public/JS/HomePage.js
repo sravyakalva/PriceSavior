@@ -77,15 +77,9 @@ $(function(){
     });
 });
 
-// Reads from firebase to console.
-function giveBackUserInfo(){
 
-    var childCountRef = firebase.database().ref().child('kiko');
-    childCountRef.on('value', function(snapshot){
-        var data = snapshot;
-        console.log(data.username);
-    });
-}
+
+
 
 
 
