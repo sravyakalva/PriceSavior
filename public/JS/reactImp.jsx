@@ -49,44 +49,46 @@ var TimerExample = React.createClass({
 
 ReactDOM.render(
     <TimerExample start={Date.now()} />,
-    document.getElementById('container')
+    document.getElementById('Timer')
 );
 
-var ServiceChooser = React.createClass({
 
-    getInitialState: function(){
-        return { total: 0 };
-    },
-
-    addTotal: function( price ){
-        this.setState( { total: this.state.total + price } );
-    },
-
+//Creates the button
+var FashionAdviceButton= React.createClass({
     render: function() {
-
-        var self = this;
-
-        var services = this.props.items.map(function(s){
-
-            // Create a new Service component for each item in the items array.
-            // Notice that I pass the self.addTotal function to the component.
-
-            return <Service name={s.name} price={s.price} active={s.active} addTotal={self.addTotal} />;
-        });
-
-        return <div>
-            <h1>Our services</h1>
-
-            <div id="services">
-                {services}
-
-                <p id="total">Total <b>${this.state.total.toFixed(2)}</b></p>
-
+        return (
+            <div>
+                <div className="prompt">
+                    Fashion Tip of the Day
+                </div>
+                <br/>
+                <button onClick={this.props.onMagicClick}>Find out!</button>
             </div>
-
-        </div>;
-
+        );
     }
 });
 
+//Creates the pop up
+var Advice = React.createClass({
+    performMagic: function() {
+        alert('Be a minimalist when it comes to jewelry. Much easier for them to stand out');
+    },
+
+    render: function() {
+        return (
+            <div>
+                <FashionAdviceButton onMagicClick={this.performMagic} />
+                <br/>
+                <img src="http://g01.a.alicdn.com/kf/HTB1PtZpKFXXXXckXXXXq6xXFXXXF.jpg"/>
+            </div>
+        );
+    }
+});
+
+
+//Sends back advice
+ReactDOM.render(
+    <Advice />,
+    document.getElementById('Advice')
+);
 
