@@ -1,0 +1,224 @@
+{
+  "children": [
+    {
+      "children": [
+        {
+          "rate": -0.4066358024691358,
+          "value": 769,
+          "name": "Nordstorm",
+          "url" : "http://http://www.nordstorm.com"
+        },
+        {
+          "rate": -0.35092180546726004,
+          "value": 1021,
+          "name": "Macy's",
+          "url": "http://www.macys.com"
+        },
+        {
+          "rate": -0.44886363636363635,
+          "value": 500,
+          "name": "Ann Taylor",
+          "url": "http://www.anntaylor.com"
+        },
+        {
+          "rate": -0.4716981132075472,
+          "value": 340,
+          "name": "J.Crew",
+          "url":"http://www.jcrew.com"
+        },
+        {
+          "rate": -0.234860883797054,
+          "value": 935,
+          "name": "Neiman Marcus",
+          "url":"http://www.neimancmarcus.com"
+        }
+      ],
+      "rate": -0.348458904109589,
+      "name": "$1000-500 Price Range"
+    },
+    {
+      "children": [
+        {
+          "rate": -0.36470588235294116,
+          "value": 324,
+          "name": "Saks Fifth Avenue",
+          "url":"http://www.saksfifthavenue.com"
+        },
+        {
+          "rate": -0.06147540983606557,
+          "value": 458,
+          "name": "Bloomingdale's",
+          "url":"http://www.bloomingdales.com"
+        },
+        {
+          "rate": -0.3368055555555556,
+          "value": 573,
+          "name": "Bergdorf Goodman",
+          "url":"http://www.bergdorfgoodman.com"
+        },
+        {
+          "rate": 0.14285714285714285,
+          "value": 350,
+          "name": "Dillard's",
+          "url":"http://www.dillard.com"
+        },
+        {
+          "rate": 0.010443864229765013,
+          "value": 500,
+          "name": "Gap",
+          "url":"http://www.gap.com"
+        }
+      ],
+      "rate": -0.18637048192771086,
+      "name": "$500-300 Price Range"
+    },
+    {
+      "children": [
+        {
+          "rate": -0.4,
+          "value": 200,
+          "name": "Talbots",
+          "url":"http://www.talbots.com"
+        },
+        {
+          "rate": -0.4645669291338583,
+          "value": 210,
+          "name": "Eddie Bauer",
+          "url":"http://www.eddiebauer.com"
+        },
+        {
+          "rate": -0.20833333333333334,
+          "value": 210,
+          "name": "shop Bop",
+          "url":"http://www.shopbop.com"
+        },
+        {
+          "rate": 1.4,
+          "value": 300,
+          "name": "Anthropologie",
+          "url":"http://www.anthropologie.com"
+        },
+        {
+          "rate": 0.18604651162790697,
+          "value": 300,
+          "name": "Intermix",
+          "url":"http://www.intermixonline.com"
+        }
+      ],
+      "rate": -0.30407523510971785,
+      "name": "$300-200 Price Range"
+    },
+    {
+      "children": [
+        {
+          "rate": -0.5954198473282443,
+          "value": 53,
+          "name": "yoox",
+          "url":"http://www.yoox.com"
+        },
+        {
+          "rate": -0.5423076923076923,
+          "value": 119,
+          "name": "French Connection",
+          "url":"http://www.fcusbuymail.com"
+        },
+        {
+          "rate": -0.575,
+          "value": 170,
+          "name": "Net-a-Porter",
+          "url":"http://www.net-a-porter.com"
+        },
+        {
+          "rate": 0.75,
+          "value": 700,
+          "name": "Urban Outfitters",
+          "url":"http://www.urbanoutfitters.com"
+        },
+        {
+          "rate": 0.2391304347826087,
+          "value": 574,
+          "name": "Free People",
+          "url":"http://www.freepeople.com"
+        }
+      ],
+      "rate": -0.47401247401247404,
+      "name": "varying in price range"
+    },
+    {
+      "children": [
+        {
+          "rate": -0.39619651347068147,
+          "value": 130,
+          "name": "Bebe",
+          "url":"http://www.bebe.com"
+        },
+        {
+          "rate": -0.1719260065288357,
+          "value": 200,
+          "name": "Forever 21",
+          "url":"http://www.forever21.com"
+        },
+        {
+          "rate": -0.2727272727272727,
+          "value": 150,
+          "name": "Victoria's Secret",
+          "url":"http://www.victoriassecret.com"
+        },
+        {
+          "rate": -0.23809523809523808,
+          "value": 150,
+          "name": "LOFT",
+          "url":"http://www.loft.com"
+        },
+        {
+          "rate": -0.05090137857900318,
+          "value": 100,
+          "name": "Aeropostale",
+          "url":"http://www.aeropostale.com"
+        }
+      ],
+      "rate": -0.2358936117325379,
+      "name": "$200-100 Price Range"
+
+    },
+    {
+      "children": [
+        {
+          "rate": -0.3829268292682927,
+          "value": 90,
+          "name": "coach",
+          "url":"http://www.coach.com"
+        },
+        {
+          "rate": -0.46920821114369504,
+          "value": 80,
+          "name": "Kenneth Cole",
+          "url":"http://www.kennethcole.com"
+        },
+        {
+          "rate": -0.3368421052631579,
+          "value": 40,
+          "name": "White House Black Market",
+          "url":"http://www.whitehouseblackmarket.com"
+        },
+        {
+          "rate": 0.6363636363636364,
+          "value": 55,
+          "name": "Chico's",
+          "url":"http://www.chicos.com"
+        },
+        {
+          "rate": -0.06116207951070336,
+          "value": 307,
+          "name": "Raphla's Lauren",
+          "url":"http://www.ralphlauren.com"
+        }
+      ],
+      "rate": -0.3422950819672131,
+      "name": "$90-$10"
+    }
+  ],
+  "rate": -0.28656039777712783,
+  "name": "BRANDS"
+
+}
