@@ -15,21 +15,16 @@
   <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <script>
-        "Use Strict";
-        // Initialize Firebase
-        var config = 
-        {
-            apiKey: "AIzaSyAs9JCm2Fyid8kmsF7VPxi5KhoPrMh4O-w",
-            authDomain: "pricesavior-23da4.firebaseapp.com",
-            databaseURL: "https://pricesavior-23da4.firebaseio.com",
-            storageBucket: "pricesavior-23da4.appspot.com",
-            messagingSenderId: "581506839881"
-        };
-        firebase.initializeApp(config);
+      var config = {
+        apiKey: "AIzaSyAs9JCm2Fyid8kmsF7VPxi5KhoPrMh4O-w",
+        authDomain: "pricesavior-23da4.firebaseapp.com",
+        databaseURL: "https://pricesavior-23da4.firebaseio.com",
+        storageBucket: "pricesavior-23da4.appspot.com",
+        messagingSenderId: "581506839881"
+      };
+      firebase.initializeApp(config);
     </script>
 
-  <!-- ReactFire -->
-  <script src="https://cdn.firebase.com/libs/reactfire/1.0.0/reactfire.min.js"></script>
 
   <!--Bootstrap-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,15 +71,15 @@
               <div id="Form" action="nothing">
 
               	<!--For now, redirects the information to the MyProfile Page-->
-                <form onsubmit="myfunc()">
+                <form id="Registration">
 
-                  <input type="text" name="username" placeholder="Enter Username"/><br>
+                  <input type="text"  name="username" placeholder="Enter Username"/><br>
                   <br>
-                  <input type="password" name="password" placeholder="Enter Password"/><br>
+                  <input type="password"  name="password" placeholder="Enter Password"/><br>
                   <br>
                   <input type="password" name="confirmPassword" placeholder="Confirm Password" /><br>
                   <br>
-                  <input type="text" name="zipcode" pattern="[0-9]{5}" placeholder="Enter Zipcode"/><br>
+                  <input type="text"  name="zipcode" pattern="[0-9]{5}" placeholder="Enter Zipcode"/><br>
                   <br>
                   <input type="email" name="email" placeholder="Enter Email"/><br>
                   <br>
