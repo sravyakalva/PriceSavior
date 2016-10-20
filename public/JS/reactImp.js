@@ -1,3 +1,7 @@
+/**
+ * Created by kikovinh on 10/20/2016.
+ */
+
 var TimerExample = React.createClass({
 
     getInitialState: function(){
@@ -91,4 +95,6 @@ ReactDOM.render(
     <Advice />,
     document.getElementById('Advice')
 );
+
+
 
