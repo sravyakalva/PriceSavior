@@ -1,3 +1,7 @@
+/**
+ * Created by kikovinh on 10/20/2016.
+ */
+
 var TimerExample = React.createClass({
 
     getInitialState: function(){
@@ -47,11 +51,6 @@ var TimerExample = React.createClass({
 });
 
 
-ReactDOM.render(
-    <TimerExample start={Date.now()} />,
-    document.getElementById('Timer')
-);
-
 
 //Creates the button
 var FashionAdviceButton= React.createClass({
@@ -91,4 +90,6 @@ ReactDOM.render(
     <Advice />,
     document.getElementById('Advice')
 );
+
+
 

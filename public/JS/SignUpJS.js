@@ -25,3 +25,14 @@ function validate(){
         $("input[type=submit]").prop("disabled", true);
     }
 }
+
+function validatePassword()
+{
+    var match =$("input[name='password']").val()==$("input[name='confirmPassword']").val();
+    if(!match)
+    {
+        $("input[name='confirmPassword']").each(function(){
+            this.setCustomValidity("Passwords Don't Match!");
+        });
+    }
+}
