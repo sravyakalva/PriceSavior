@@ -50,7 +50,7 @@ var LogButton = React.createClass({
 
     //Goes back to home page once submit is clicked
     _changeView: function(){
-        document.location.href = "../jasmine/Home.html";
+        document.location.href = "../Home.html";
     },
 
     //Creates template for form
