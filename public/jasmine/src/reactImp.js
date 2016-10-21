@@ -51,11 +51,6 @@ var TimerExample = React.createClass({
 });
 
 
-ReactDOM.render(
-    <TimerExample start={Date.now()} />,
-    document.getElementById('Timer')
-);
-
 
 //Creates the button
 var FashionAdviceButton= React.createClass({
