@@ -1,0 +1,22 @@
+{
+  "name": "nodejs_pricesavior",
+  "version": "1.0.0",
+  "description": "This will be the nodejs backend for PriceSavior",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sravyakalva/PriceSavior.git"
+  },
+  "author": "Michael Morris & Sravya Kalva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sravyakalva/PriceSavior/issues"
+  },
+  "homepage": "https://github.com/sravyakalva/PriceSavior#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
