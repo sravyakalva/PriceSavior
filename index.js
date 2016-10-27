@@ -18,17 +18,12 @@ app.post('/createAccount', function (req, res) {
 
   var node = accountsRef.child('User Accounts');
   node.set({
-    Pico:{
-
     Username: req.body.accountNew[0],
-        Password: req.body.accountNew[1],
-        Zipcode: req.body.accountNew[2],
-        Email: req.body.accountNew[3]
+    Password: req.body.accountNew[1],
+    Zipcode: req.body.accountNew[2],
+    Email: req.body.accountNew[3]
 
-    }
-
-
-  })
+  });
   res.send("Account has been made!")
 });
 
