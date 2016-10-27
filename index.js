@@ -22,6 +22,7 @@ app.post('/createAccount', function (req, res) {
     "Zipcode": req.body.accountNew[2],
     "Email": req.body.accountNew[3]
   });
+  res.send("Account has been made!")
 });
 
 
