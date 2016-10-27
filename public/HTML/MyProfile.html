@@ -3,6 +3,8 @@
 <head>
     <title>Home Page</title>
     <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+
     <!--Jasmine-->
     <link rel="shortcut icon" type="image/png" href="../jasmine/lib/jasmine-2.5.2/jasmine_favicon.png">
     <link rel="stylesheet" type="text/css" href="../jasmine/lib/jasmine-2.5.2/jasmine.css">
@@ -30,7 +32,6 @@
     <script src="../react-15.3.2/build/react.js"></script>
     <script src="../react-15.3.2/build/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-
 
 
 
@@ -102,28 +103,80 @@
                 <li><a href="../HTML/Settings.html">Settings</a></li>
                 <li><a href="../HTML/Createlist.html">Create an outfit</a></li>
                 <li><a href="../HTML/SavedList.html">Saved Outfits</a></li>
+                <li>
+
+                </li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
             <h1 class="page-header font" style="padding-top:50px">Shopstyle Store</h1>
-
-
-
             <p id="chart">
             <h3 style="font-weight: bold">Legend</h3>
             <p style="width: 960px"></p>
             <div id="legend"></div>
 
-
         </div>
 
      </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
+        <div id ="todoItems">
+
+        </div>
+        <form id="newItemForm" action="/todo" method="post" enctype="multipart/form-data">
+            <input type="text" id="newTodo" name="todoText" /><input type="file" id="newFile" name="img" />
+            <input type="submit" value="Submit" />
+        </form>
+        <script type="text/babel">
+            "use strict"
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAs9JCm2Fyid8kmsF7VPxi5KhoPrMh4O-w",
+                authDomain: "pricesavior-23da4.firebaseapp.com",
+                databaseURL: "https://pricesavior-23da4.firebaseio.com",
+                storageBucket: "pricesavior-23da4.appspot.com",
+                messagingSenderId: "581506839881"
+            };
+            firebase.initializeApp(config);
+            var fireRef = firebase.database().ref('todos');
+            fireRef.on("child_added",function(v){
+                createTodo(v.val().text,v.val().img);
+            });
+            function createTodo(text, img)
+            {
+                if(img)
+                {
+                    $('#todoItems').append(
+                            '<div class="todoItem"><img src="'+img+'" /><br/>'+text+'</div>'
+                    );
+                }
+                else
+                    $('#todoItems').append(
+                            '<div class="todoItem">'+text+'</div>'
+                    );
+            }
+            $('#newItemForm').submit(function(e)
+            {
+                e.preventDefault();
+                var formData = new FormData($("#newItemForm")[0]);
+                console.log(formData);
+                $.ajax({
+                    type: "POST",
+                    url: "/todo",
+                    data: formData,processData: false,
+                    contentType: false
+
+                });
+            });
+        </script>
+
+
+    </div>
+
 
 
 </div>
 
 
-</div>
 
 </body>
 </html>
