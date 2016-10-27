@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 
 firebase.initializeApp({
-  serviceAccount: "PriceSavior-6bc819483d90.json",
+  serviceAccount: "./PriceSavior-6bc819483d90.json",
   databaseURL: "https://pricesavior-23da4.firebaseio.com"
 });
 
