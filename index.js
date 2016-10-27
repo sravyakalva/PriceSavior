@@ -6,7 +6,7 @@ firebase.initializeApp({
   serviceAccount: "PriceSavior-6bc819483d90.json",
   databaseURL: "https://pricesavior-23da4.firebaseio.com"
 });
-var accountsRef = firebase.database().ref("User Accounts");
+var accountsRef = firebase.database().ref();
 
 var port = process.env.PORT || 3000;
 
