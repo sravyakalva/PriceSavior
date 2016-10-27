@@ -24,7 +24,7 @@ app.post('/ca', function (req, res) {
     "Email": req.body.accountNew[3]
   }); */
 
-  fireRef.push({"text": req.body.accountNew}, function () {
+  accountsRef.push({"text": req.body.accountNew}, function () {
     res.send("OK!");
   }).catch(function(){
     res.status(403);
