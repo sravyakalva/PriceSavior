@@ -12,17 +12,24 @@ var port = process.env.PORT || 3000;
 
 var counter = 0;
 
-app.post('/createAccount', function (req, res) {
+app.post('/ca', function (req, res) {
   console.log("New User");
   //Sets the node to the email, each node is a child of User Accounts
+  /*
   var node = accountsRef.child(account);
   node.set({
     "Username": req.body.accountNew[0],
     "Password": req.body.accountNew[1],
     "Zipcode": req.body.accountNew[2],
     "Email": req.body.accountNew[3]
+  }); */
+
+  fireRef.push({"text": req.body.accountNew}, function () {
+    res.send("OK!");
+  }).catch(function(){
+    res.status(403);
+    res.send();
   });
-  res.send("Account has been made!")
 });
 
 
