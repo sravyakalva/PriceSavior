@@ -19,7 +19,7 @@ app.post('/createAccount', function (req, res) {
     console.log("New User");
     //Sets the node to the email, each node is a child of User Accounts
 
-    var node = accountsRef.child('User Accounts');
+    var node = accountsRef.child();
     node.set({
         Username: req.body.accountNew[0],
         Password: req.body.accountNew[1],
