@@ -17,16 +17,8 @@ $(document).ready(function ()
 
 
             ev.preventDefault(); // to stop the form from submitting
-            var accountInput = [];
-            accountInput.push($("input[name='username']").val());
-            accountInput.push($("input[name='password']").val());
-            accountInput.push($("input[name='zipcode']").val());
-            var email = $("input[name='email']").val();
+            var accountInput = $("input[name='username']").val();
 
-            //Replaces "." since Firebase does not accept periods
-            email = email.replace(/\./g,'|');
-
-            accountInput.push(email);
             $.post('/createAccount',{accountNew: accountInput});
 
             //Closes the popup after hitting "submit"
