@@ -17,3 +17,6 @@ Welcome to the PriceSavior wiki!
 =======
 3. About Me Page with Timer and Fashion Tip: (IMPLEMENTED as of 10/14) Users will be able to view how long they are away from the website (in the future) exploring the other things we hope to build and improve as well as Fashion Tip of the Day button.
 >>>>>>> origin/HW-Submission
+
+
+https://glacial-falls-44521.herokuapp.com/
