@@ -17,11 +17,9 @@ firebase.initializeApp({
 });
 
 var ref = firebase.database().ref('Users');
-ref.once('value').then(function(snap){
+/*ref.once('value').then(function(snap){
     console.log('snap.val()', snap.val());
-});
-
-
+});*/
 var	port	=	process.env.port	||	3000;
 
 
