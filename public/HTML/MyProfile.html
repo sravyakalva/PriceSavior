@@ -36,7 +36,7 @@
 
     <!--Javascript-->
     <script type="text/babel" src="../JS/myProfile.js"></script>
-    <script type="text/javascript" src="../jasmine/spec/searchSpec.js"></script>
+    <script type="text/javascript" src="../JS/apiStuff.js"></script>
     <link rel="stylesheet" href="../CSS/myProfileStyleSheet.css">
 </head>
 
@@ -120,9 +120,12 @@
      </div>
 
 
-</div>
-
-
+    <!--Sravya's Search bar-->
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main" >
+        <input id="search" placeholder="Type in A Name or Brand Name or a Unbranded name"/>
+        <button id="button" type="button" onclick="BrandSearch()">Click me!</button>
+        <div id="img"></div>
+    </div>
 </div>
 
 </body>
