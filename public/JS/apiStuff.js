@@ -25,8 +25,6 @@ function BrandSearch(){
 
         }
 
-
-
     });
 
 
