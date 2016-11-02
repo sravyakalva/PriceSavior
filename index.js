@@ -1,6 +1,7 @@
 /**
  * Created by kikovinh on 10/26/2016.
  */
+var path = require("path");
 var firebase = require("firebase");
 var express = require('express');
 var app = express();
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 
 firebase.initializeApp({
-    serviceAccount:"./pricesavior-node-client-service-account.json",
+    serviceAccount: "pricesavior-node-client-service-account.json",
     databaseURL:"https://pricesavior-23da4.firebaseio.com"
 });
 
