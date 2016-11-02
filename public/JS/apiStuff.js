@@ -4,7 +4,7 @@
 function BrandSearch(){
     var search=document.getElementById('search').value;
     console.log(search);
-    $.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
+    $.getJSON('https://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
         for (i=0;i< ssResults.products.length;i++)
         {
             console.log(ssResults.products[i].unbrandedName);
