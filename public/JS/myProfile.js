@@ -1,7 +1,7 @@
 
 
 
-
+/*
 
 $(document).ready(function () {
 
@@ -42,7 +42,7 @@ function getTheImage(category)
 			}
 		}
 	});
-}
+}*/
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
 	width = 960,
 	height = 500 - margin.top - margin.bottom,
