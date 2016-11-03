@@ -7,62 +7,84 @@
 <!-- Custom styles for this template -->
 
 <head>
-  <!-- This page allows the user to login if they already have an account -->
-  <meta charset="utf-8">
-  <title>Login Page</title>
+    <!-- This page allows the user to login if they already have an account -->
+    <meta charset="utf-8">
+    <title>Login Page</title>
 
-	<!--CSS Sheets-->
-	<link href="../CSS/signin.css" rel="stylesheet">
+    <!--CSS Sheets-->
+    <link href="../CSS/signin.css" rel="stylesheet">
 
-	<!--Bootstrap-->
-	<link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- React -->
-	<script src="../react-15.3.2/build/react.js"></script>
-	<script src="../react-15.3.2/build/react-dom.js"></script>
-
-
-
-	<!--Babel-->
-	<script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
-
-	<!--Firebase-->
-	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
-	<script>
-		var config = {
-			apiKey: "AIzaSyAs9JCm2Fyid8kmsF7VPxi5KhoPrMh4O-w",
-			authDomain: "pricesavior-23da4.firebaseapp.com",
-			databaseURL: "https://pricesavior-23da4.firebaseio.com",
-			storageBucket: "pricesavior-23da4.appspot.com",
-			messagingSenderId: "581506839881"
-		};
-		firebase.initializeApp(config);
-	</script>
-
-
-	<!--Jquery-->
-	<script type="text/javascript" src="../JQuery/jquery-3.1.0.min.js" ></script>
-	<link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.min.css">
-	<script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
-	<script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <!-- React -->
+    <script src="../react-15.3.2/build/react.js"></script>
+    <script src="../react-15.3.2/build/react-dom.js"></script>
 
 
 
-	<!--JavaScript-->
-	<script type="text/javascript" src="../JS/HomePage.js"></script>
+    <!--Babel-->
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
 
-	<!--React JSX-->
-	<script type="text/babel" src="../JS/Login.js"></script>
-	
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyAs9JCm2Fyid8kmsF7VPxi5KhoPrMh4O-w",
+            authDomain: "pricesavior-23da4.firebaseapp.com",
+            databaseURL: "https://pricesavior-23da4.firebaseio.com",
+            storageBucket: "pricesavior-23da4.appspot.com",
+            messagingSenderId: "581506839881"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <!--Jquery-->
+    <script type="text/javascript" src="../JQuery/jquery-3.1.0.min.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+
+
+    <!--JavaScript-->
+    <script type="text/javascript" src="../JS/HomePage.js"></script>
+
+
 
 
 </head>
-	<body>
-    	<div class="container">
-			<fieldset style="max-width:350px; margin: 0 auto">
-				<h2 class="text-center" style="font-family: Copperplate Gothic Light">Sign in</h2>
-				<div id="reactForm" class="form-signin"></div>
-			</fieldset>
-    	</div> <!-- /container -->
-	</body>
+<body>
+<!--<div class="container">
+    <fieldset style="max-width:350px; margin: 0 auto">
+        <h2 class="text-center" style="font-family: Copperplate Gothic Light">Sign in</h2>
+    </fieldset>
+</div> -->
+    <div class="container">
+        <fieldset style="max-width:350px; margin: 0 auto">
+            <form class="form-signin" action="../HTML/MyProfile.html">
+
+                <!--Asks user for Email and password-->
+                <h2 class="text-center" style="font-family: 'Copperplate Gothic Light'">Sign in</h2>
+                <label for="inputUsername" class="sr-only">Username</label>
+                <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+                <!--Checkbox lets users to allow website to remember password-->
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+
+                <!--Sign up button-->
+                <div id="loginButton">
+                </div>
+            </form>
+        </fieldset>
+    </div> <!-- /container -->
+
+</body>
 </html>

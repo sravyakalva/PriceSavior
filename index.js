@@ -25,12 +25,12 @@ var	port	=	process.env.PORT	||	3000;
 
 app.post('/HTML/Home.html', function (req, res) {
 
-    var email = req.body.email;
-    email = email.replace(/\./g, '|');
+
 
     //Sets the node to the email, each node is a child of User Accounts
     ref.push({
             Name: req.body.name,
+            Email: req.body.email,
             Comment: req.body.feedback
     },function () {
         res.sendFile('public/HTML/Home.html', { root : __dirname});
