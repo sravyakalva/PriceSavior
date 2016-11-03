@@ -3,7 +3,7 @@
 
 
 
-/*$(document).ready(function () {
+$(document).ready(function () {
 
 		var product=[];
 		$.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50', function (ssResults)
@@ -27,7 +27,7 @@
 function getTheImage(category)
 {
 
-	$.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
+	$.getJSON('https://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
 		for(var i=0; i<ssResults.products.length;i++)
 		{
 			if(category==(ssResults.products[i].categories[0].id))
@@ -42,7 +42,7 @@ function getTheImage(category)
 			}
 		}
 	});
-}*/
+}
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
 	width = 960,
 	height = 500 - margin.top - margin.bottom,
