@@ -6,7 +6,7 @@
 $(document).ready(function () {
 
 		var product=[];
-		$.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50', function (ssResults)
+		$.getJSON('https://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50', function (ssResults)
 		{
 			for( var i=0; i<ssResults.products.length;i++)
 			{
