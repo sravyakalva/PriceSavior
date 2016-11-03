@@ -1,6 +1,22 @@
 /**
  * Created by sravyakalva on 11/1/16.
  */
+$(function (){
+    var avaliableItems=[];
+    $.getJSON('http://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
+        for (i=0;i< ssResults.products.length;i++)
+        {
+            avaliableItems.push(ssResults.products[i].unbrandedName);
+            avaliableItems.push(ssResults.products[i].name);
+            avaliableItems.push(ssResults.products[i].brandedName);
+        }
+    });
+    $("#search").autocomplete({
+        source:avaliableItems
+    });
+    console.log(avaliableItems);
+});
+
 function BrandSearch(){
     var search=document.getElementById('search').value;
     console.log(search);
@@ -26,8 +42,5 @@ function BrandSearch(){
         }
 
     });
-
-
-
-
+    $('html, body').animate({scrollTop:$(document).height()}, 'slow');
 }
