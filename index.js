@@ -30,9 +30,8 @@ app.post('/HTML/Home.html', function (req, res) {
 
     //Sets the node to the email, each node is a child of User Accounts
     ref.child(email).set({
-            Username: req.body.username,
-            Password: req.body.confirmPassword,
-            Zipcode: req.body.zipcode
+            Name: req.body.name,
+            Comment: req.body.feedback
     },function () {
         res.sendFile('public/HTML/Home.html', { root : __dirname});
     }).catch(function(){
