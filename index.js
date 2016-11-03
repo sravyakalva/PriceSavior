@@ -16,7 +16,7 @@ firebase.initializeApp({
     databaseURL:"https://pricesavior-23da4.firebaseio.com"
 });
 
-var ref = firebase.database().ref('Users');
+var ref = firebase.database().ref('Comments');
 /*ref.once('value').then(function(snap){
     console.log('snap.val()', snap.val());
 });*/
@@ -29,7 +29,7 @@ app.post('/HTML/Home.html', function (req, res) {
     email = email.replace(/\./g, '|');
 
     //Sets the node to the email, each node is a child of User Accounts
-    ref.child(email).set({
+    ref.push({
             Name: req.body.name,
             Comment: req.body.feedback
     },function () {
