@@ -8,7 +8,7 @@ var accountsRef = firebase.database().ref("Users");
 $(document).ready(function () 
 {
     //Prevents popup from showing on load
-    $('#signUpForm').dialog({autoOpen:false})
+    $('#signUpForm').dialog({autoOpen:false});
     $('#signUpLink').click(function(){
        $('#signUpForm').dialog('open');
 
@@ -17,7 +17,14 @@ $(document).ready(function ()
             $('#signUpForm').dialog('close');
         });
     });
+
+
+    $('#dialogHelp').dialog({autoOpen:false});
+    $('#dialogHelpClick').click(function(){
+       $('#dialogHelp').dialog('open');
+    });
 });
+
 
 
 

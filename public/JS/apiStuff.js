@@ -6,9 +6,8 @@ $(function (){
     $.getJSON('https://api.shopstyle.com/api/v2/products?pid=uid3824-35982732-83&offset=0&limit=50',function(ssResults) {
         for (i=0;i< ssResults.products.length;i++)
         {
-            avaliableItems.push(ssResults.products[i].unbrandedName);
+
             avaliableItems.push(ssResults.products[i].name);
-            avaliableItems.push(ssResults.products[i].brandedName);
         }
     });
     $("#search").autocomplete({
